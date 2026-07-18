@@ -1,283 +1,237 @@
 # Git Engineering Lab
 
 > **A practical Git reference for developers.**
-> Learn Git by purpose, not by memorizing commands.
+> Learn Git with a structured engineering approach—from daily commands to Git internals and real interview scenarios.
 
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-MVP-blue)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Git](https://img.shields.io/badge/git-reference-orange)
 
 ---
 
 ## Overview
 
-Git Engineering Lab là một bộ tài liệu Git được xây dựng theo hướng **Engineering Handbook**.
+**Git Engineering Lab** là một bộ tài liệu Git được xây dựng theo hướng **Engineering Reference**.
 
-Mục tiêu của dự án không phải dạy Git từ đầu, mà cung cấp một nơi để:
+Thay vì chỉ liệt kê các câu lệnh, repository này giúp bạn:
 
-- Tra cứu command nhanh
-- Hiểu bản chất hoạt động của Git
-- Chọn đúng command cho từng tình huống
-- Áp dụng Best Practices trong dự án thực tế
+* Tra cứu nhanh các câu lệnh Git thường dùng.
+* Hiểu cách Git hoạt động bên trong.
+* Chọn đúng giải pháp cho từng tình huống thực tế.
+* Luyện tư duy xử lý Git thông qua các bài tập phỏng vấn.
+* Khám phá Git Internals bằng các thí nghiệm thực tế.
 
-Repository được thiết kế để có thể sử dụng hằng ngày như một "Git Reference".
+Repository được thiết kế để có thể sử dụng hằng ngày như một **Git Reference** dành cho Developer, Reviewer và Tech Lead.
 
 ---
 
 ## Who is this for?
 
-- Junior Developer
-- Middle Developer
-- Senior Developer
-- Tech Lead
-
----
-
-## Learning Philosophy
-
-Thay vì học theo command:
-
-```
-git add
-
-git commit
-
-git push
-
-git pull
-```
-
-Repository được tổ chức theo **mục đích sử dụng**.
-
-Ví dụ:
-
-> Muốn bỏ commit cuối
-
-↓
-
-```
-Undo & Recovery
-```
-
-Thay vì phải nhớ command là:
-
-```
-git reset
-
-git revert
-
-hay
-
-git restore
-```
+* Junior Developer
+* Mid-level Developer
+* Senior Developer
+* Tech Lead
+* Interviewer
+* Anyone who wants to truly understand Git
 
 ---
 
 ## Repository Structure
 
-```
+```text
 git-engineering-lab/
 
-README.md
-
+appendix/
 cheatsheet/
 handbook/
-playbook/
+interview/
+reference/
+
+README.md
+CONTRIBUTING.md
+LICENSE
 ```
 
 ---
 
-## Documentation Structure
+## Documentation Map
 
-### 1. Cheat Sheet
+### Cheat Sheet
 
-Tra cứu nhanh command theo workflow.
+📁 [`cheatsheet/`](./cheatsheet)
+
+Tra cứu nhanh các câu lệnh Git theo workflow.
 
 Ví dụ:
 
-```
-Stage & Commit
+* Setup & Config
+* Stage & Commit
+* Branch & Switch
+* Merge & Rebase
+* Undo & Recovery
+* Best Practices
 
-↓
+**Mục tiêu**
 
-git add
-
-git commit
-
-git commit --amend
-```
-
-Không giải thích internals.
-
-Mục tiêu:
-
-> Tìm command trong vài giây.
+> Tìm đúng command trong vài giây.
 
 ---
 
-### 2. Handbook
+### Handbook
 
-Giải thích WHY.
+📁 [`handbook/`](./handbook)
 
-Ví dụ:
+Giải thích bản chất hoạt động của Git.
 
-- Working Tree
-- Index
-- Commit
-- Branch
-- HEAD
-- Remote
-- History Rewrite
+Các chủ đề bao gồm:
 
----
+* Git Mental Model
+* Object Database
+* Working Tree
+* Index
+* HEAD
+* Branch
+* Remote
+* Merge
+* Rebase
+* History Rewrite
 
-### 3. Playbook
+**Mục tiêu**
 
-Tình huống thực tế.
-
-Ví dụ:
-
-- Detached HEAD
-- Merge Conflict
-- Lost Commit
-- Wrong Branch
-- Force Push
+> Hiểu **WHY**, không chỉ biết **HOW**.
 
 ---
 
-## Cheat Sheet
+### Appendix
 
-### Repository
+📁 [`appendix/`](./appendix)
 
-| File | Description |
-|------|-------------|
-| [Setup & Config](./cheatsheet/01-setup-and-config.md) | Install, configure Git |
-| [Create & Clone](./cheatsheet/02-create-and-clone.md) | Initialize and clone repositories |
-| [Inspect Status & History](./cheatsheet/03-inspect-status-and-history.md) | View repository status and history |
-| [Stage & Commit](./cheatsheet/04-stage-and-commit.md) | Stage and create commits |
-| [Branch & Switch](./cheatsheet/05-branch-and-switch.md) | Branch management |
-| [Sync With Remote](./cheatsheet/06-sync-with-remote.md) | Fetch, pull, push |
-| [Merge & Rebase](./cheatsheet/07-merge-and-rebase.md) | Merge history |
-| [Undo & Recovery](./cheatsheet/08-undo-and-recovery.md) | Undo and recover changes |
-| [Stash & Cherry-pick](./cheatsheet/09-stash-and-cherry-pick.md) | Temporary work |
-| [Tags & Release](./cheatsheet/10-tags-and-release.md) | Version tagging |
-| [Decision Matrix](./cheatsheet/11-decision-matrix.md) | Which command should I use? |
-| [Best Practices](./cheatsheet/12-best-practices.md) | Engineering recommendations |
+Git Internals Lab.
 
----
+Toàn bộ phần này tập trung vào việc **chứng minh** cách Git hoạt động bằng các thí nghiệm thực tế.
 
-## Handbook
+Bao gồm:
 
-Coming soon.
+* Đọc Commit Graph
+* Khám phá thư mục `.git`
+* Common Git Myths
+* Plumbing vs Porcelain
 
-- Git Mental Model
-- Working Tree
-- Index
-- Commit
-- Branch
-- HEAD
-- Remote
-- History Rewrite
+**Mục tiêu**
+
+> Quan sát Git Internals bằng chính Git.
 
 ---
 
-## Quick Start
+### Interview
 
-### Clone
+📁 [`interview/`](./interview)
 
-```bash
-git clone https://github.com/<your-org>/git-engineering-lab.git
-```
+Bộ câu hỏi tình huống dành cho Technical Interview.
 
-### Open Cheat Sheet
+Mỗi case bao gồm:
 
-```
-cheatsheet/
-```
+* Scenario
+* Multiple Solutions
+* Trade-offs
+* Recommended Answer
+* Interviewer Notes
+* Evaluation Rubric
 
-Chọn đúng workflow bạn đang cần.
+Các chủ đề:
 
-Ví dụ:
+* Branch
+* Merge
+* Rebase
+* Conflict
+* Recovery
+* Release
+* Team Collaboration
+* Git Internals
 
-```
-Undo & Recovery
-```
+**Mục tiêu**
 
-hoặc
-
-```
-Merge & Rebase
-```
+> Đánh giá khả năng sử dụng Git trong môi trường thực tế.
 
 ---
 
-## Recommended Learning Order
+### Reference
+
+📁 [`reference/`](./reference)
+
+Danh sách các câu lệnh Git phổ biến.
+
+Mỗi command được mô tả theo:
+
+* Scope
+* Purpose
+* Common Usage
+
+**Mục tiêu**
+
+> Tra cứu command nhanh mà không cần đọc toàn bộ tài liệu.
+
+---
+
+## Recommended Learning Path
 
 ### New to Git
 
-```
-Setup
-
-↓
-
-Create Repository
-
-↓
-
-Stage & Commit
-
-↓
-
-Branch
-
-↓
-
-Remote
-
-↓
-
-Merge
-
-↓
-
-Recovery
+```text
+Cheat Sheet
+    ↓
+Handbook
+    ↓
+Appendix
 ```
 
 ---
 
 ### Daily Development
 
-```
-Stage & Commit
-
-↓
-
-Branch
-
-↓
-
-Remote
-
-↓
-
-Decision Matrix
-
-↓
-
+```text
+Reference
+    ↓
+Cheat Sheet
+    ↓
 Best Practices
+```
+
+---
+
+### Git Interview Preparation
+
+```text
+Handbook
+    ↓
+Appendix
+    ↓
+Interview
 ```
 
 ---
 
 ### Troubleshooting
 
+```text
+Reference
+    ↓
+Cheat Sheet
+    ↓
+Appendix
 ```
-Undo & Recovery
 
-↓
+---
 
-Playbook
-```
+## Project Highlights
+
+* Practical workflow-oriented documentation
+* Git Internals explained from first principles
+* Hands-on experiments using Plumbing commands
+* Engineering Best Practices
+* Decision Matrix for choosing the right command
+* Interview case studies with real-world scenarios
+* Quick command reference
 
 ---
 
@@ -287,42 +241,23 @@ Contributions are welcome.
 
 Please read:
 
-```
-CONTRIBUTING.md
-```
+* [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 
-before creating a Pull Request.
-
----
-
-## Roadmap
-
-### MVP
-
-- [ ] Cheat Sheet
-- [ ] Handbook
-- [ ] Playbook
-
-### Future
-
-- [ ] Labs
-- [ ] Incident Library
-- [ ] Enterprise Playbooks
-- [ ] Git Internals
+before opening an Issue or creating a Pull Request.
 
 ---
 
 ## License
 
-MIT License.
+This project is licensed under the MIT License.
 
 ---
 
 ## Support
 
-If this project helps you:
+If this repository helps you:
 
-- ⭐ Star the repository
-- 🍴 Fork the repository
-- 🐛 Open an Issue
-- 🚀 Submit a Pull Request
+* ⭐ Star the repository
+* 🍴 Fork the repository
+* 🐞 Report an Issue
+* 🚀 Submit a Pull Request
